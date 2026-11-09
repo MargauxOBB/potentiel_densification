@@ -7,7 +7,16 @@ function categories_Potentieldedensification_11(feature, value, size, resolution
     switch(valueStr) {
         case 'a maintenir':
             return [ new ol.style.Style({
-        fill: new ol.style.Fill({color: 'rgba(36,183,202,0.8)'}),
+        fill: new ol.style.Fill({color: 'rgba(0,202,246,0.8)'}),
+        text: createTextStyle(feature, resolution, labelText, labelFont,
+                              labelFill, placement, bufferColor,
+                              bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
+    })];
+			break;
+
+        case 'a questionner':
+            return [ new ol.style.Style({
+        fill: new ol.style.Fill({color: 'rgba(255,240,0,0.8)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
@@ -16,7 +25,7 @@ function categories_Potentieldedensification_11(feature, value, size, resolution
 
         case 'a supprimer':
             return [ new ol.style.Style({
-        fill: new ol.style.Fill({color: 'rgba(225,142,97,0.8)'}),
+        fill: new ol.style.Fill({color: 'rgba(203,147,145,0.8)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)

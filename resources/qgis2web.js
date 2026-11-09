@@ -9,15 +9,15 @@ var map = new ol.Map({
         minZoom: 1,
         
         projection: new ol.proj.Projection({
-            code: 'EPSG:3857',
-            //extent: [16984.315574, 6068710.257999, 44626.677406, 6095356.582759],
+            code: 'EPSG:2154',
+            //extent: [487386.600000, 6744913.100000, 505374.400000, 6762155.239993],
             units: 'm'
         })
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([16984.315574, 6068710.257999, 44626.677406, 6095356.582759], map.getSize());
+map.getView().fit([487386.600000, 6744913.100000, 505374.400000, 6762155.239993], map.getSize());
 
 //change cursor
 function pointerOnFeature(evt) {
